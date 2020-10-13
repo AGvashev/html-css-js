@@ -1,0 +1,733 @@
+/* All pages styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    max-width: 1110px;
+    width: 98%;
+    margin: auto;
+    height: auto;
+}
+
+/* Header  */
+
+
+/* Header about info */
+
+.header {
+    background-color: #000;
+    color: #666;
+    font-size: 12px;
+}
+
+.header .fas {
+    font-size: 15px;
+} 
+
+.header__about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.info__number,
+.info__work__day,
+.info__work__time {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.info__work__day {
+    border-right: 1px solid #666;
+    border-left: 1px solid#666;
+}
+
+.login__signin {
+    padding: 0 5px;
+    color: #666;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .header__about,
+    .header__menu {
+        display: none;
+    }
+
+}
+
+/* Header navigation menu */
+
+.header__menu {
+    background-color: #0F0F0F;
+}
+
+.header__menu__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.logo__text {
+    font-family: Post No Bills Jaffna;
+    font-weight: bold;
+    color: #fff;
+    font-size: 36px;
+}
+
+.header__menu__links {
+    padding: 20px;
+}
+
+.header__menu__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #666;
+    padding: 20px;
+
+    transition: .2s linear;
+}
+
+.header__menu__link:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.header__menu__link:hover {
+    color:#fff;
+    background-color: #1F1F1F;
+}
+
+/* Mobile header */
+
+.line1 {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 40px;
+    height: 3px;
+    background-color:#1F1F1F;
+}
+
+.line1::before {
+    display: block;
+    content: "";
+    position: relative;
+    top: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color:#1F1F1F;
+}
+
+.line1::after {
+    display: block;
+    content: "";
+    position: relative;
+    top: 8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color:#1F1F1F;
+}
+
+.opened.line1::before {
+    display: none;
+}
+
+.opened.line1::after {
+    transform: rotate(80deg) translate(-7px, 0px);
+}
+
+.opened.line1 {
+    transform: rotate(50deg) ;
+}
+
+
+
+.header__mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #969696;
+    box-shadow: 0px 5px 5px #999999;
+    opacity: 0.9;
+
+}
+
+.header__mobile__content {
+    position: relative;
+    top: 35px;
+    display: none;  
+}
+
+.header__open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 1s linear;
+}
+
+@media (max-width: 700px) {
+    .header__mobile {
+        display: block;
+        z-index: 100;
+    }
+
+    .header__menu__link {
+        width: 100%;
+        text-align: center;
+        color:#fff !important;
+    }
+
+}
+
+
+
+/* Main Page */
+
+.main__page {
+    width: 100%;
+    height: 810px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(img/fpbg.png) center no-repeat;
+}
+
+.main__page__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main__page__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 80px;
+    padding: 90px 65px;
+    border: 4px solid #fff;
+    width: 200px;
+    color: #fff;
+}
+
+.page__title__top {
+    font-size: 64px;
+    font-weight: bold;
+    font-family: Post No Bills Jaffna;
+    height: 75px;
+    
+}
+
+.page__title__bottom {
+    border-top: 2px solid #fff;
+    font-size: 21px;
+}
+
+.main__page__text {
+    font-size: 16px;
+    color: #fff;
+    max-width: 730px;
+}
+
+@media (max-width: 700px) {
+    .main__page__title {
+        padding: 70px 45px;
+    }
+    .page__title__top {
+        font-size: 45px;
+    }
+    .page__title__bottom {
+        font-size: 15px;
+    }
+    .main__page__text {
+        font-size: 11px;
+    }
+}
+
+/* New Season Page */
+
+.new__season__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.new__season__left {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    padding: 80px 20px;
+}
+
+.new__season__left hr {
+    width: 120px;
+    margin: 50px 0;
+}
+
+.season__left__title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+}
+
+.season__left__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18;
+    font-family: 'Playfair Display', serif;
+    transition: .2s linear;
+    margin: 15px;
+}
+
+.item__block:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.item__image {
+    max-width: 200px;
+    max-height: 200px;
+    background-color: #191B1C;
+    padding: 50px 20px;
+}
+
+.item__price {
+    font-size: 16px;
+}
+
+.new__season__right {
+    width: 45%;
+
+    background: url(img/tpman.png) no-repeat left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.season__right__content {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 20px;
+
+    text-transform: uppercase;
+}
+
+.season__right__title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.new__season__right hr {
+    width: 150px;
+    margin: 30px;
+}
+
+.season__right__buton {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #fff;
+    padding: 12px 28px;
+    transition: .2s linear background-color;
+}
+
+.season__right__buton:hover {
+    background-color: #666;
+}
+
+@media (max-width:1200px) {
+
+    .new__season__content {
+        flex-wrap: wrap;
+    }
+    .new__season__left {
+        width: 100%;
+    }
+    .new__season__right {
+        background-position: 50% 30%;
+        width: 100%;
+    }
+}
+@media (max-width:700px) {
+
+    .season__left__title {
+        font-size: 30px;
+    }
+}
+
+/* New collection */
+
+.new__collection__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.new_collection__left {
+    width: 45%;
+
+    background: url(img/nsman.png) center no-repeat;
+    background-size: cover;
+    
+}
+
+.new_collection__right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+
+    padding: 50px 0;
+}
+
+.new_collection__right hr {
+    width: 150px;
+    margin: 40px 0 20px 0;
+}
+
+.collection__right__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.collection__right__text {
+    max-width: 470px;
+    font-size: 14px;
+    margin: 20px 0 60px 0;
+    padding: 0 10px;
+}
+
+.collection__right__button {
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #fff;
+    padding: 10px 40px;
+    transition: .2s linear background-color;
+}
+
+.collection__right__button:hover {
+    background-color: #666;
+}
+
+@media (max-width:900px) {
+    .new_collection__left {
+        display: none;
+    }
+    .new_collection__right {
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .new_collection__left {
+        background-position: 100% 0%;
+        background-size: auto;
+    }
+    .collection__right__title {
+        font-size: 30px;
+    }
+    .collection__right__text {
+        font-size: 12px;
+    }
+    .collection__right__button {
+        font-size:14px;
+    }
+}
+
+/* New goods */
+
+.new__goods {
+    padding: 30px 0;
+    background-color: #000;
+}
+
+.new__goods__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.new__goods__content hr {
+    margin: 30px 0;
+    width: 150px;
+}
+
+.new__goods__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.new__goods__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .new__goods__title {
+        font-size: 28px;
+    }
+}
+
+/* Our brands */
+
+.our__brands {
+    padding: 30px 0;
+    background-color: #0f0f0f;
+}
+
+.our__brands__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.our__brands__content hr {
+    margin: 30px 0;
+    width: 150px;
+}
+
+.our__brands__title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.our__brands__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.brands__img {
+    margin: 0 10px;
+}
+
+@media (max-width: 1200px) {
+    .our__brands__items {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .our__brands__title {
+        font-size: 30px;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background: url(img/footerimg.png) center no-repeat;
+    background-size: cover;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+
+    text-align: left;
+
+    margin: 60px 0px;
+}
+
+.footer__block {
+    margin: 15px;
+    width: 33.33%;
+}
+
+.footer__titles {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+}
+
+.shop__about__text,
+.footer__mailing__text {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer__categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.categories__blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.categories__block {
+    text-decoration: none;
+    text-transform: lowercase;
+    padding:10px;
+    margin: 10px;
+    color: #D0D0D0;
+    background-color:#0F0F0F;
+    transition: .2s linear;
+}
+
+.categories__block:hover {
+    background-color: #1F1F1F;
+}
+
+.email__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+
+.email__field {
+    padding:15px;
+    padding-right: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border:none;
+    color: red;
+}
+
+.email__field::placeholder {
+    color: #969696;
+    font-size: 14px;
+}
+
+.submit__button {
+    padding: 15px;
+    margin-left: -10px;
+    border:none;
+    background-color: #0F0F0F;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .footer__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .email__field {
+        padding: 10px;
+        padding-right: 5px;
+    }
+
+    .submit__button{
+        padding: 10px;
+    }
+
+    .footer__titles {
+        font-size: 20px;
+    }
+
+    .shop__about__text,
+    .footer__mailing__text,
+    .categories__block {
+        font-size: 10px;
+    }
+
+    .footer__content {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .email__form {
+        justify-content: left;
+    }
+}
+
+
+/* Last line */
+.lastline {
+    background-color: #0F0F0F;
+}
+
+.lastline__content {
+    margin: 10px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #D0D0D0;
+}
+
+.lastline__right {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .lastline__content {
+        font-size: 9px;
+    }
+}
